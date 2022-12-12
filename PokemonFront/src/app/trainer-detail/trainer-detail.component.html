@@ -1,0 +1,25 @@
+<div>
+
+    <div *ngIf="!editMode">
+        <div class="TrnInfo">
+            Trainer: {{trainer.name}} <br/> <br/>
+            Email: {{trainer.email}} <br/>
+        </div>
+        <div class="Tbtns">
+            <button class="TGE button-33" (click)="goToEdit()">Edit Trainer Info</button>
+            <button class="TD button-33" (click)="deleteMe()">Delete Trainer</button> <br/> <br/>
+        </div>
+    </div>
+
+    <div *ngIf="editMode">
+        <div class="editTrn">
+            <div class="EditTrnInput">Trainer: <input type="text" [(ngModel)]="editName"/></div>
+            
+            <div class="EditTrnInput">Email:<input type="text" [(ngModel)]="editEmail"/></div>
+            <div class="TEbtns">
+                <button class="TSE button-33" (click)="saveEdit()">Save Edits</button>
+                <button class="TCE button-33"(click)="cancelEdit()">Cancel Edits</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+
+<hr/>
+  
+    <div class="container" *ngIf="!viewTeamOn && !editMode">
+        <div class="rsvpform">
+            <h1>{{ this.trainer.name }}'s Pokémon</h1>
+        </div>
+        Choose Your Trainer!
+        <select #trainerSelect (change)="GetTrainerTeams(trainerSelect.value)">
+            <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+        </select>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <table style="display: flex; position:relative; left:120px">
+            <tr>
+                <div *ngFor="let team of teamList">
+                    <td><div><button class="trainerTeamName button-team " style="max-width: 100px;" (click)="viewTeam(team.team_id)">Team {{ team.team_name }}</button></div>
+                    </td>
+                    <ng-container class="trainerTeamPokemon">
+                        <ng-container *ngFor="let pokemon of team.pokemon">
+                            <td [ngClass]="getType(pokemon)">
+                                <span class="pokemonName" >{{ pokemon.pokemon_name }} </span>
+                                    <img class="pokemonImage" [src]="pokemon.pokemon_pics.front_default" >
+                            </td>
+                        </ng-container>
+                    </ng-container>
+                </div>
+            </tr>
+        </table>
+    </div>
+
+    <div *ngIf="viewTeamOn && !editMode">
+        <div  class="card-list">
+            <div *ngFor="let pokemon of team.pokemon" class="card">
+                <div [ngClass]="getTypeCard(pokemon)">
+                    <div><img class="pokemonCardImage" [src]="pokemon.pokemon_pics.front_default" /></div>
+                    <br/>
+                    <div class="pokemonCardText">
+                        <div >{{ pokemon.pokemon_name }}</div> 
+                        <div >HP: {{ pokemon.hp }},</div>
+                        <div >Height: {{ pokemon.height * 4 }}in,</div> 
+                        <div>Weight: {{ pokemon.weight /4 }}lbs</div>
+                        <div >Types: {{ pokemon.type }}</div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <button class="button-33" (click)="updateTeamOn(team.team_id)">Edit Team</button>
+        <button class="button-33" (click)="delete(team)">Delete</button>
+        <button class="button-33" (click)="cancel()">Back</button> 
+    </div>
+    
+        <div *ngIf="editMode && viewTeamOn">
+            <app-team-details [team]="team" (update)="update($event)"></app-team-details>
+            <button class="button-33" (click)="cancel()">Cancel</button>
+        </div>
+    
+

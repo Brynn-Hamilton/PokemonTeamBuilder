@@ -1,0 +1,115 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+</head>
+<hr />
+<div class="rsvpform">
+    <h1>Kanto Pokedex</h1>
+</div>
+<div class="bubble">
+    <ng-container *ngIf="!showdetails">
+        <div class="flex">
+
+            <div *ngFor="let pokemon of pokemonList" class="pokemon">
+                <div class="pokeball">
+                    <img class="pokemonpic" [src]="pokemon.sprites.front_default" [alt]="pokemon.name" [title]="pokemon.name" />
+                </div>
+                <button (click)="getSpecies(this.pokemon.id)" (click)="showPoke(this.pokemon.id)" class="button-33 font"
+                    role="button">{{ pokemon.name }}</button>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="showdetails">
+        <div class="pokedex border">
+            <div class="flex">
+                <button class="screen-buttons border"
+                    style="border: 2px solid black; width: 65px; height: 65px; background: rgb(14, 207, 233); border: 8px lightblue solid; "></button>
+                <button class="screen-buttons border" style="width: 20px; height: 20px;"></button>
+                <button class="screen-buttons border" style="width: 20px; height: 20px; background:yellow;"></button>
+                <button class="screen-buttons border" style="width: 20px; height: 20px; background:green;"></button>
+            </div>
+            <hr style="border: rgb(182, 0, 55) solid 5px; margin: 0px -45px 50px;">
+            <div class="outer-screen">
+                <div class="flex center">
+                    <button class="screen-buttons"></button>
+                    <button class="screen-buttons"></button>
+                </div>
+
+                <div class="screen">
+                    <div class="flex gap space-between">
+                        <div class="half center text-center">
+                            <ng-container class="dex" *ngIf="showdetails">
+                                <div class="pokeball">
+                                    <img class="center jump" style="height: auto;" [src]="pokemon.sprites.front_default"
+                                        [alt]="pokemon.name" [title]="pokemon.name" />
+                                </div>
+                                <div class="dex name">
+                                    {{this.pokemon.name}}
+                                </div>
+                            </ng-container>
+                            <div class="flex space-between dex">
+                                <div class="half">
+                                    <p class="p-margin"><strong>Height: {{this.pokemon.height * 4}}in<br></strong></p>
+                                </div>
+                                <div class="half">
+                                    <p class="p-margin"><strong>Weight: {{this.pokemon.weight / 4}} lbs<br></strong></p>
+                                </div>
+                            </div>
+
+                            <div class="dex text-center">
+                                <p class="p-margin" style="text-align: center;"><strong>
+                                        Type(s):
+                                        <ng-container *ngFor="let types of this.pokemon.types">
+                                            {{types.type.name}}
+                                        </ng-container>
+                                    </strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="half dex center">
+                            <strong>
+                                {{this.pokeSpecies.flavor_text_entries[3].flavor_text}}
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex space-between">
+                    <button class="screen-buttons" style="width: 25px; height: 25px;"></button>
+                    <div class="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-end gap">
+                <div class="three-qtr">
+                    <div class="flex center-align">
+                        <button class="screen-buttons" class="button-33" role="button"
+                            (click)="cancel()">Cancel</button>
+                        <button class="long-buttons" style="background: green;"></button>
+                        <button class="long-buttons" style="background: red;"></button>
+                    </div>
+
+                    <div class="display-name dex">
+                        {{this.pokemon.name}}
+                    </div>
+                </div>
+                
+                <div class="fifth flex center-align gap">
+                    <button class="button-33" role="button" (click)="previousText(this.pokeSpecies.id)"
+                        (click)="previous(this.pokemon.id)">Previous</button>
+                    <button class="button-33" role="button" (click)="nextText(this.pokeSpecies.id)"
+                        (click)="next(this.pokemon.id)">Next</button> <br><br>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,101 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+</head>
+
+<div>
+    <div class="rsvpform">
+        <h1>Edit Pokémon Team</h1>
+        <hr />
+    </div>
+    <div>
+        <div class="container center">
+
+            <div class="block">
+                <div class="inline qtr"><label for="teamName">Team Name:&nbsp;</label></div>
+                <div class="three-qtr inline"><input type="text" [(ngModel)]="this.team.team_name" /></div>
+            </div>
+
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="trainerName">Trainer: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="this.team.trainer_id">
+                        <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+                    </select>
+                </div>
+
+                <div class="block">
+                    <div class="inline qtr">
+                        <label for="pokemon1"> Pokémon 1: </label>
+                    </div>
+                    <div class="three-qtr inline">
+                        <select [(ngModel)]="this.firstPokemon">
+                            <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }}  {{ pokemon.name }}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="inline qtr">
+                        <label for="pokemon2"> Pokémon 2: </label>
+                    </div>
+                    <div class="three-qtr inline">
+                        <select [(ngModel)]="this.secondPokemon">
+                            <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }}  {{ pokemon.name }}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="inline qtr">
+                        <label for="pokemon3"> Pokémon 3: </label>
+                    </div>
+                    <div class="three-qtr inline">
+                        <select [(ngModel)]="this.thirdPokemon">
+                            <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }}  {{ pokemon.name }}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="inline qtr">
+                        <label for="pokemon4"> Pokémon 4: </label>
+                    </div>
+                    <div class="three-qtr inline">
+                        <select [(ngModel)]="this.fourthPokemon">
+                            <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }}  {{ pokemon.name }}</option>
+                        </select><br />
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="inline qtr">
+                        <label for="pokemon5"> Pokémon 5: </label>
+                    </div>
+                    <div class="three-qtr inline">
+                        <select [(ngModel)]="this.fifthPokemon">
+                            <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }} {{ pokemon.name }}</option>
+                        </select><br />
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="inline qtr">
+                        <label for="pokemon6"> Pokémon 6: </label>
+                    </div>
+                    <div class="three-qtr inline">
+                        <select [(ngModel)]="this.sixthPokemon">
+                            <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }} {{ pokemon.name }}</option>
+                        </select><br />
+                    </div>
+                </div>
+                <br />
+                <br />
+                <button class="button-33" (click)="updateIt()">Save Changes</button>
+            </div>
+        </div>
+    </div>

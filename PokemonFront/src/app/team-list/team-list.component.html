@@ -1,0 +1,27 @@
+<div *ngIf="!viewTeamOn">
+    <div *ngFor="let team of teamList">
+        Trainer: {{ team.trainer_name }} <br>
+        Team: {{ team.team_name }}
+
+        <div *ngFor="let pokemon of team.pokemon">
+            Pokemon: {{ pokemon.pokemon_name }} <br>
+        </div>
+        <button (click)="viewTeam(team.team_id)">View Team Details</button>
+        <br>
+    </div>
+</div>
+
+<div *ngIf="viewTeamOn && !editMode">
+    <div *ngFor="let pokemon of team.pokemon">
+        <img [src]="pokemon.pokemon_pics.front_default" />
+        {{ pokemon.pokemon_name }} HP: {{ pokemon.hp }}<br />
+        {{ pokemon.type }}
+    </div>
+    <button (click)="updateTeamOn(team.team_id)">Edit Team</button>
+    <button (click)="delete(team.team_id)">Delete</button>
+</div>
+
+<div *ngIf="editMode && viewTeamOn">
+    <app-team-details [team]="team" (update)="update($event)"></app-team-details>
+    <button (click)="cancel()">Cancel</button>
+</div>

@@ -1,0 +1,289 @@
+  
+.rsvpform {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    height: auto;
+    padding: 30px;
+    text-decoration: underline;
+ }
+
+  .button-33 {
+    background-color: #DEF1EF;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: #19483f;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Fredoka One', cursive;
+    font-size: 120%;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-weight: 1000;
+  }
+  
+  .button-33:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.10);
+  }
+  
+  .dex {
+      font-family: 'Montserrat', sans-serif;
+      font-family: 'Press Start 2P', cursive;
+  }
+  
+  .font {
+      font-family: 'Montserrat', sans-serif;
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+      font-size: 12px;
+  }
+  
+  .bubble {
+      background-color: #a4cec5 ;
+      outline-offset: 5px;
+      border: 2px solid black;
+      border-radius: 10px;
+      margin: 60px;
+      padding: 25px;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .centerbuttons {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+  }
+  
+  .centerbuttons button {
+    margin: auto 10px;
+  }
+  
+  .pokemon {
+    min-width: 150px;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .pokeball {
+      background: url(..\Images\pokeballsmall.png);
+      background-repeat: no-repeat;
+      background-position: center;   
+  }
+  .pokeball img { 
+    margin: auto;
+  text-align: center;
+  display: block;
+  }
+  
+  .flex { 
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.poke-container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pokedex {
+    margin: auto;
+    background-color: rgb(233, 0, 70);
+    padding: 45px;
+    border-radius: 25px;
+    border: 2px black solid;
+}
+
+.outer-screen {
+    background-color: rgb(216, 216, 216);
+    padding: 0 50px;
+    border-radius: 15px;
+    position: relative;
+}
+
+@media only screen and (max-width: 820px) {
+    .flex {
+        display: block;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gap {
+    gap: 20px;
+}
+
+.center-align {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.wrap {
+    justify-content: space-evenly;
+}
+
+.half {
+    width: 47%;
+}
+
+@media only screen and (max-width: 820px) {
+    .half {
+        width: 100%;
+    }
+}
+
+.half img {
+    height: 100px;
+}
+
+.screen-buttons {
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+.long-buttons {
+    width: 55px;
+    height: 15px;
+    border-radius:
+        10px;
+    margin: 15px;
+}
+
+.screen {
+    padding: 20px;
+    min-height: fit-content;
+    background-color: rgb(176, 226, 255);
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.outer-screen:before {
+    content: '';
+    position: absolute;
+    border-top: 50px solid rgb(216, 216, 216);
+    border-left: 50px solid rgb(233, 0, 70);
+    left: 0;
+    bottom: 0;
+    width: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hamburger {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 65px;
+    height: 50px;
+    margin: auto 0;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+.name {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 13pt;
+}
+
+.three-qtr {
+    flex-grow: 3;
+}
+
+.fifth {
+    flex-grow: 1;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.display-name {
+    background-color: rgb(252, 255, 47);
+    padding: 15px;
+    max-width: 300px;
+    min-width: min-content;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.description {
+    background-color: grey;
+    margin: 20px;
+    padding: 20px;
+}
+
+button {
+    border: 0;
+}
+
+.border {
+    outline: 5px solid rgb(6, 0, 46);
+}
+
+.arrow-buttons {
+    width: 85px;
+    height: 25px;
+    border-radius: 15px;
+}
+
+.flex-end {
+    align-items: flex-end;
+}
+
+.jump {
+    animation: jump 1s linear infinite;
+}
+
+.pokemonpic {
+ width: auto;
+ height: auto;
+}
+.pokemonpic:hover {
+    animation: jump 1s linear infinite;
+}
+
+@keyframes jump {
+    0%,
+    100% {
+        padding: 0.25rem 0 0 0;
+    }
+    50% {
+        padding: 0 0 0.25rem 0;
+    }
+}

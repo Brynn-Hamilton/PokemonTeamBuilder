@@ -1,0 +1,15 @@
+.bubble {
+    background-color: #F18884;
+    outline-offset: 5px;
+    border-color: rgb(201, 249, 228);
+    border-radius: 10px;
+    margin-right: 150px;
+    margin-left: 150px;
+    opacity: .8;
+ }
+ 
+ .flex { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }

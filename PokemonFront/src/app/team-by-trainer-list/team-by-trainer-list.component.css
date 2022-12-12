@@ -1,0 +1,404 @@
+.container {
+   border-radius: 5px;
+   padding:15px;
+   width: auto;
+} 
+
+.rsvpform {
+   text-align: center;
+   color: black;
+   font-weight: bold;
+   font-family: 'Montserrat', sans-serif;
+   font-family: 'Press Start 2P', cursive;
+   height: auto;
+   padding: 30px;
+   text-decoration: underline;
+}
+
+ .trainerTeamName{
+    border: 1px solid black;
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px;
+    width: auto;
+    height: 100%;
+    border-radius: 8px;
+    background: #427f73
+ }
+
+ .trainerTeamName:hover{
+    background-color: #DEF1EF;
+    box-shadow:  0 12px 16px 0 #DEF1EF, #DEF1EF;
+    
+ }
+
+ .trainerTeamPokemon{
+    border: 1px solid black;
+    width: 150px;
+}
+
+.pokemonImage{
+    display: block;
+    margin-right: auto;
+    margin-left: 40%;
+    width: 65%;
+ }
+
+ .pokemonName {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    display: flex;
+    font-weight: 1000;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+ .grass1{
+    background: url(..\Images\grasstype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #38BF4B;
+ }
+
+ .bug1{
+    background: url(..\Images\bugtype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #83C300;
+}
+
+ .water1{
+    background: url(..\Images\watertype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #3692DC;
+ }
+
+ .normal1{
+    background: url(..\Images\normaltype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #919AA2;
+ }
+
+ .fire1{
+    background: url(..\Images\firetype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FF9741;
+ }
+
+ .dragon1{
+    background: url(..\Images\dragontype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #006FC9;
+ }
+
+ .rock1{
+    background: url(..\Images\rocktype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #C8B686;
+ }
+
+ .poison1{
+    background: url(..\Images\poisontype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #B567CE;
+ }
+
+ .ground1{
+    background: url(..\Images\groundtype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #E87236;
+ }
+
+ .ghost1{
+    background: url(..\Images\ghosttype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #4C6AB2;
+ }
+
+ .electric1{
+    background: url(..\Images\electrictype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FBD100;
+ }
+
+ .flying1{
+    background: url(..\Images\flyingtype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #89AAE3;
+ }
+
+ .steel1{
+    background: url(..\Images\steeltype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #5A8EA2;
+ }
+
+ .dark1{
+    background: url(..\Images\darktype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #5B5466;
+ }
+
+ .fairy1{
+    background: url(..\Images\fairytype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FB89EB;
+ }
+
+ .psychic1{
+    background: url(..\Images\psychictype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FF6675;
+ }
+
+ .fighting1{
+    background: url(..\Images\fightingtype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #E0306A;
+ }
+
+ .ice1{
+   background: url(..\Images\icetype.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: left;
+   background-color: #3ad8ff;
+}
+
+ .pokemonCardImage{
+   display: block;
+   width: 60%;
+   margin-left: 10%;
+}
+
+.pokemonCardText{
+   padding-top: 3rem;
+   margin-top: 1px;
+   font-size: 16px;
+   
+}
+
+ .card-list{
+   display: flex;
+   padding: 3rem;
+   overflow-x: scroll;
+   
+}
+
+.card-list::-webkit-scrollbar{
+   width: 10px;
+   height: 10px;
+}
+
+.card-list::-webkit-scrollbar-thumb{
+   background: #F18884;
+   border-radius: 10px;
+   box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+.card-list::-webkit-scrollbar-track{
+   background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
+
+.cardType{
+   display: flex;
+   position: center;
+   flex-direction: column;
+   height: 350px;
+   min-width: 250px;
+   padding: 3rem;
+   border-radius: 16px;
+   box-shadow: -1rem 0 3rem #F18884;
+   transition: .2s;
+}
+
+.card:hover {
+   transform: translateY(-1rem);
+}
+
+.card:hover~.card{
+   transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+   margin-left: -200px;
+}
+
+.grass2{
+    background: url(..\Images\grasscard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #38BF4B;
+    max-width: 5%;
+ }
+
+ .bug2{
+    background: url(..\Images\grasscard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #83C300;
+    max-width: 5%;
+}
+
+ .water2{
+    background: url(..\Images\watercard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #3692DC;
+    max-width: 5%;
+ }
+
+ .normal2{
+    background: url(..\Images\normalcard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #919AA2;
+ }
+
+ .fire2{
+    background: url(..\Images\firecard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FF9741;
+ }
+
+ .dragon2{
+    background: url(..\Images\dragoncard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #006FC9;
+ }
+
+ .rock2{
+    background: url(..\Images\fightingcard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #C8B686;
+ }
+
+ .poison2{
+    background: url(..\Images\grasscard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #B567CE;
+ }
+
+ .ground2{
+    background: url(..\Images\fightingcard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #E87236;
+ }
+
+ .ghost2{
+    background: url(..\Images\psychiccard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #4C6AB2;
+ }
+
+ .electric2{
+    background: url(..\Images\electriccard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FBD100;
+ }
+
+ .flying2{
+    background: url(..\Images\normalcard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #89AAE3;
+ }
+
+ .steel2{
+    background: url(..\Images\steelcard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #5A8EA2;
+ }
+
+ .dark2{
+    background: url(..\Images\darktype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #5B5466;
+ }
+
+ .fairy2{
+    background: url(..\Images\fairytype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FB89EB;
+ }
+
+ .psychic2{
+    background: url(..\Images\psychiccard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FF6675;
+ }
+
+ .fighting2{
+    background: url(..\Images\fightingcard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #E0306A;
+ } 
+
+ .ice2{
+   background: url(..\Images\watercard.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: left;
+   background-color: #3ad8ff;
+} 

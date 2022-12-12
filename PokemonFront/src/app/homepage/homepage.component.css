@@ -1,0 +1,87 @@
+.tri-right.border.right-top:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -40px;
+  top: -8px;
+	bottom: auto;
+	border: 32px solid;
+	border-color: #666 transparent transparent transparent;
+}
+.tri-right.right-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+    left: auto;
+	right: -20px;
+    top: 0px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: rgb(204, 224, 220) transparent transparent transparent;
+}
+
+.border{
+    border: 8px solid #666;
+  }
+  .round{
+    border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+  
+  }
+body{
+    background-image:  url(..\Images\homepage3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.pokemonHeader{
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 30px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #3858AB;
+    -webkit-text-fill-color:#FBCC04;
+}
+.container{
+    background-color: rgb(204, 224, 220);
+    width: 53%;
+    border-radius: 10px;
+    opacity: .9;
+}
+
+.pokemonTitle{
+    margin-left: 350px;
+    height: 100px;
+    width: 300px;
+}
+
+.welcomeText{
+    font-family: 'Press Start 2P', cursive;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.welcome{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-right: 200px;
+    display: flex;
+}

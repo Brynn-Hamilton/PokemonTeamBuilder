@@ -1,0 +1,16 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+</head>
+
+<hr />
+<h1 class="listHeader">List of Trainers</h1>
+
+<div class="card-list">
+    <div *ngFor="let trainer of trainerList" class="card">
+        <app-trainer-detail [trainer]="trainer" (delete)="deleteOne($event)" (save)="saveEdit($event)">
+        </app-trainer-detail>
+    </div>
+</div>

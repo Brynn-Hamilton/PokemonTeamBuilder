@@ -1,0 +1,103 @@
+/* Trainer Info */
+.TrnInfo{
+   display: flex;
+   margin-top: 10rem;
+   margin-bottom: 3rem;
+   justify-content: center;
+   font-size: 13px;
+   color: black;
+   /* white-space: nowrap; */
+}
+
+/* Trainer Buttons */
+.Tbtns{
+   margin-top: 22rem;
+}
+
+/* Edit Trainer Info Button */
+.TGE{
+   margin-right: 12px;
+   font-size: 14px;
+   border-radius: 3px;
+}
+
+/* Delete Trainer Button */
+.TD{
+   font-size: 14px;
+   border-radius: 3px;
+}
+
+/* Trainer Edit Buttons*/
+.TEbtns{
+   padding-top: 22rem;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Trainer Save Edit Button*/
+.TSE{
+   margin-right: 12px;
+   font-size: 14px;
+   border-radius: 3px;
+}
+
+/* Trainer Cancel Edit Button */
+.TCE{
+   font-size: 14px;
+   border-radius: 3px;
+}
+
+/* Edit Trainer Inputs */
+.EditTrnInput{
+   width: 1rem;
+   display: flex;
+   margin-top: 6rem;
+   padding-left: 2rem;
+   justify-content: left;
+   font-size: 13px;
+}
+
+input[type="text"] {
+   font-size:16px;
+}
+
+ 
+ @media only screen and (max-width: 720px) {
+   .container {
+   width: 100%;
+   max-width: 100%;
+ }
+ }
+ 
+ /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 60%;
+        margin-top: 0;
+    }
+ }
+ 
+ @media only screen and (max-width: 720px) {
+   .inline { 
+      display:block;
+   }
+ }
+
+ @media only screen and (max-width: 720px) {
+   .qtr {
+   width: 100%;
+ }
+ }
+ 
+ @media only screen and (max-width: 720px) {
+   .three-qtr {
+   width: 100%;
+ }
+ }
+ 
+ @media only screen and (max-width: 720px) {
+   select, input[type=text] { 
+      width: 100%;
+   }
+ }

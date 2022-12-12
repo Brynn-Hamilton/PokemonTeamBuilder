@@ -1,0 +1,99 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+</head>
+<hr />
+<div class="rsvpform">
+    <h1>Build Your Pokémon Team</h1>
+
+</div>
+
+<div>
+    <div class="container center">
+        <div class="block">
+            <div class="inline qtr"><label for="teamName">Team Name: </label></div>
+            <div class="three-qtr inline"><input type="text" [(ngModel)]="newTeam.team_name"></div>
+        </div>
+
+        <div class="block">
+            <div class="inline qtr">
+                <label for="trainerName">Trainer: </label>
+            </div>
+            <div class="three-qtr inline">
+                <select [(ngModel)]="newTeam.trainer_id">
+                    <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+                </select>
+            </div>
+
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon1"> Pokémon 1: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="firstPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }}  {{ pokemon.name }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon2"> Pokémon 2: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="secondPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }}  {{ pokemon.name }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon3"> Pokémon 3: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="thirdPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }}  {{ pokemon.name }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon4"> Pokémon 4: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="fourthPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }}  {{ pokemon.name }}</option>
+                    </select><br />
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon5"> Pokémon 5: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="fifthPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }}  {{ pokemon.name }}</option>
+                    </select><br />
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon6"> Pokémon 6: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="sixthPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">#{{ pokemon.id }}  {{ pokemon.name }}</option>
+                    </select><br />
+                </div>
+            </div>
+            <div class="container center"><button routerLink="/trainerteams" class="button-33"
+                    (click)="saveIt()">Save</button></div>
+        </div>
+    </div>
+</div>
